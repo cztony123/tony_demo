@@ -1,90 +1,26 @@
 <template>
     <div class="indexBox">
-        <div class="optionsItem">
-            <el-menu default-active="3" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
-                <el-submenu index="1">
-                    <template slot="title">
-                        <i class="el-icon-location"></i>
-                        <span>导航一</span>
-                    </template>
-                    <el-menu-item-group>
-                        <el-menu-item index="1-1">选项1</el-menu-item>
-                        <el-menu-item index="1-2">选项2</el-menu-item>
-                        <el-menu-item index="1-3">选项3</el-menu-item>
-                        <el-menu-item index="1-4">选项4</el-menu-item>
-                    </el-menu-item-group>
-                </el-submenu>
-                <el-menu-item index="2">
-                    <i class="el-icon-menu"></i>
-                    <span slot="title">导航二</span>
-                </el-menu-item>
-                <el-menu-item index="3">
-                    <i class="el-icon-document"></i>
-                    <span slot="title">导航三</span>
-                </el-menu-item>
-                <el-menu-item index="4">
-                    <i class="el-icon-setting"></i>
-                    <span slot="title">导航四</span>
-                </el-menu-item>
-            </el-menu>
-        </div>
-
-        <div class="page">
-            <div class="TopPage">
-                <TopPage />
-            </div>
-            <div>页面</div>
-        </div>
+        <app-heder></app-heder>
+        <app-navbar></app-navbar>
+        <app-main></app-main>
     </div>
 </template>
 
 <script>
-import testApi from "@/api/test"
-import TopPage from "@/components/topPage.vue";
+import AppHeder from "@/components/AppHeader/index.vue"
+import AppMain from "@/components/AppMain/index.vue"
+import AppNavbar from "@/components/AppNavbar/index.vue"
 export default {
     components: {
-        TopPage,
+        AppHeder,
+        AppMain,
+        AppNavbar
     },
     created() {
-        this.fetchData();
+
     },
     methods: {
-        fetchData() {
-            testApi.getList().then((res) => {
-                console.log(res.data);
-            });
-        },
-        handleOpen(key, keyPath) {
-            console.log(key, keyPath);
-        },
-        handleClose(key, keyPath) {
-            console.log(key, keyPath);
-        },
+
     },
 };
 </script>
-
-<style scoped>
-.indexBox {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-.optionsItem {
-    width: 15%;
-}
-.el-menu-vertical-demo {
-    height: 100%;
-}
-.el-menu {
-    border: none;
-}
-.el-submenu .el-menu-item {
-    min-width: 15%;
-}
-
-.page {
-    background: #e7e7e7;
-    width: 85%;
-}
-</style>

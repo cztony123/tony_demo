@@ -51,6 +51,7 @@ export default {
                                 message: '登录成功',
                                 type: 'success'
                             });
+                            localStorage.setItem('user', res.data.data.token);
                             this.$router.push('layout');
                         }else{
                             this.$message.error('用户名或密码错误');
