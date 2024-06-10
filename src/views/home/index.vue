@@ -1,5 +1,5 @@
 <template>
     <div>
-        2222
+        首页
     </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
     <div>
-        2222
+        信息管理
     </div>
 </template>

@@ -2,18 +2,18 @@
     <div class="navbar">
         <el-menu default-active="1" :router="true" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#545c64" text-color="#fff" acive-text-color="#ffd04b">
             <el-menu-item index="/home">
-                <i class="el-icon-menu"></i><span slot="title">首页</span>
+                <i class="el-icon-s-home"></i><span slot="title">我的世界</span>
             </el-menu-item>
             <el-submenu index="2">
                 <template slot="title">
-                    <i class="el-icon-location"></i><span slot="title">信息管理</span>
+                    <i class="el-icon-setting"></i><span slot="title">世界设定</span>
                 </template>
                 <el-menu-item-group>
                     <el-menu-item index="/booktype">
-                        <span slot="title">类别管理</span>
+                        <span class="titleItem" slot="title">类别管理</span>
                     </el-menu-item>
                     <el-menu-item index="/bookinfo">
-                        <span slot="title">信息管理</span>
+                        <span class="titleItem" slot="title">信息管理</span>
                     </el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
@@ -23,13 +23,13 @@
                 </template>
                 <el-menu-item-group>
                     <el-menu-item index="/kucunsearch">
-                        <span slot="title">库存查询</span>
+                        <span class="titleItem" slot="title">库存查询</span>
                     </el-menu-item>
                     <el-menu-item index="/rukusearch">
-                        <span slot="title">入库查询</span>
+                        <span class="titleItem" slot="title">入库查询</span>
                     </el-menu-item>
                     <el-menu-item index="/chukusearch">
-                        <span slot="title">出库查询</span>
+                        <span class="titleItem" slot="title">出库查询</span>
                     </el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
@@ -51,8 +51,12 @@ export default {
 
     },
     methods: {
-        handleOpen(){},
-        handleClose(){}
+        handleOpen(key, keyPath) {
+            console.log(key, keyPath);
+        },
+        handleClose(key, keyPath) {
+            console.log(key, keyPath);
+        }
     },
 };
 </script>
@@ -73,4 +77,12 @@ export default {
 .el-menu {
     border-right: none;
 }
+
+.titleItem{
+    padding-left: 20px;
+}
+::v-deep .el-menu-item-group__title{
+    display: none;
+}
+
 </style>

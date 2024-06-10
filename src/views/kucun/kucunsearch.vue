@@ -1,5 +1,5 @@
 <template>
     <div>
-        2222
+        库存查询
     </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
     <div>
-        2222
+        入库查询
     </div>
 </template>

@@ -7,10 +7,29 @@
             <el-breadcrumb-item  :to="{path: $route.path}">{{$route.meta.title}}</el-breadcrumb-item>
         </el-breadcrumb>
         <div>
-            123
+            <router-view/>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+            
+        }
+    },
+    methods: {
+        onLogOut(){
+            this.$router.push('/');
+            this.$message({
+                message: '退出成功',
+                type: 'success'
+            });
+        }
+    },
+};
+</script>
 
 <style scoped>
 .main {
@@ -32,7 +51,7 @@
     position: absolute;
     color: #fff;
     border-left: 3px solid #ccc;
-    left:27px;
+    left:8px;
     height: 15px;
   }
 </style>

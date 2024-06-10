@@ -1,5 +1,5 @@
 <template>
     <div>
-        2222
+        类别管理
     </div>
 </template>
