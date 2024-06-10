@@ -39,12 +39,21 @@
 </template>
 
 <script>
-import TopPage from "../../components/topPage.vue";
+import testApi from "@/api/test"
+import TopPage from "@/components/topPage.vue";
 export default {
     components: {
         TopPage,
     },
+    created() {
+        this.fetchData();
+    },
     methods: {
+        fetchData() {
+            testApi.getList().then((res) => {
+                console.log(res.data);
+            });
+        },
         handleOpen(key, keyPath) {
             console.log(key, keyPath);
         },
@@ -75,7 +84,7 @@ export default {
 }
 
 .page {
-    background: red;
+    background: #e7e7e7;
     width: 85%;
 }
 </style>
