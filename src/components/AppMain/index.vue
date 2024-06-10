@@ -6,7 +6,7 @@
             <el-breadcrumb-item v-show="$route.path=='/chukusearch' || $route.path== '/kucunsearch' || $route.path== '/rukusearch'">库存管理</el-breadcrumb-item>
             <el-breadcrumb-item  :to="{path: $route.path}">{{$route.meta.title}}</el-breadcrumb-item>
         </el-breadcrumb>
-        <div>
+        <div class="page">
             <router-view/>
         </div>
     </div>
@@ -40,6 +40,7 @@ export default {
     top: 50px;
     bottom: 0;
     overflow-y: auto;
+    padding: 10px;
 }
 .el-breadcrumb{
     height: 12px;
@@ -47,11 +48,11 @@ export default {
     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
     margin-bottom: 10px;
   }
-  .line{
+.line{
     position: absolute;
     color: #fff;
     border-left: 3px solid #ccc;
-    left:8px;
+    left:18px;
     height: 15px;
-  }
+}
 </style>

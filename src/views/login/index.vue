@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import testApi from "@/api/test"
+import myaxios from '@/utils/myaxios'
 export default {
     data() {
         return {
@@ -45,18 +45,18 @@ export default {
         onSubmitLogin() {
             this.$refs.form.validate(valid => {
                 if (valid) {
-                    testApi.getLogin().then((res) => {
+                    myaxios.get('/api/login').then(res =>{
                         if(this.form.username == res.data.data.token && this.form.password == res.data.data.password){
                             this.$message({
                                 message: '登录成功',
                                 type: 'success'
                             });
                             localStorage.setItem('user', res.data.data.token);
-                            this.$router.push('layout');
+                            this.$router.push('home');
                         }else{
                             this.$message.error('用户名或密码错误');
                         }
-                    });
+                    })
                 } else {
                     return false;
                 }
