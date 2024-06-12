@@ -15,26 +15,11 @@ Mock.mock('/api/login', 'get', {
 Mock.mock('/api/data1', 'get', {
     'items': [
         {
-            "id": 1,
-            raceType: '张三',
-            'humansNumber|18-30': 1
+            name: '王小虎',
+            province: '上海',
+            city: '普陀区',
+            address: '上海市普陀区金沙江路',
+            zip: 200333
         },
-        {
-            "id": 2,
-            raceType: '李四',
-            'humansNumber|18-30': 1
-        },
-        {
-            "id": 3,
-            raceType: '王五',
-            'humansNumber|18-30': 1
-        }
     ]
 })
-
-// Mock.mock('/api/data2', 'get', {
-//     'items|3': [{
-//         "value": 1,
-//         'key': 1
-//     }]
-// })

@@ -2,7 +2,7 @@
     <div class="main">
         <el-breadcrumb separator-class="el-icon-arrow-right">
             <span class="line"></span>
-            <el-breadcrumb-item v-show="$route.path=='/booktype' || $route.path== '/bookinfo'">信息管理</el-breadcrumb-item>
+            <el-breadcrumb-item v-show="$route.path=='/racetype' || $route.path== '/raceinfo'">信息管理</el-breadcrumb-item>
             <el-breadcrumb-item v-show="$route.path=='/chukusearch' || $route.path== '/kucunsearch' || $route.path== '/rukusearch'">库存管理</el-breadcrumb-item>
             <el-breadcrumb-item  :to="{path: $route.path}">{{$route.meta.title}}</el-breadcrumb-item>
         </el-breadcrumb>

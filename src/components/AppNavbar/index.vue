@@ -9,10 +9,10 @@
                     <i class="el-icon-setting"></i><span slot="title">世界设定</span>
                 </template>
                 <el-menu-item-group>
-                    <el-menu-item index="/booktype">
-                        <span class="titleItem" slot="title">类别管理</span>
+                    <el-menu-item index="/racetype">
+                        <span class="titleItem" slot="title">种族</span>
                     </el-menu-item>
-                    <el-menu-item index="/bookinfo">
+                    <el-menu-item index="/raceinfo">
                         <span class="titleItem" slot="title">信息管理</span>
                     </el-menu-item>
                 </el-menu-item-group>
