@@ -13,7 +13,7 @@
                         <span class="titleItem" slot="title">种族</span>
                     </el-menu-item>
                     <el-menu-item index="/raceinfo">
-                        <span class="titleItem" slot="title">信息管理</span>
+                        <span class="titleItem" slot="title">战斗力</span>
                     </el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
